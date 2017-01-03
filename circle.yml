@@ -1,0 +1,15 @@
+machine:
+  node:
+    version: 7.0.0
+dependencies:
+  pre:
+    - npm install --global yarn@0.16.1
+    - npm i -g gulp
+  cache_directories:
+    - ~/.yarn-cache
+  override:
+    - yarn install
+test:
+  override:
+    - npm run lint
+    - npm run test --quiet

@@ -1,0 +1,30 @@
+.fab-button {
+  background-color: $fab-button;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  color: $fab-text;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  z-index: $fab-z-index;
+  transition: background-color $fab-transition-speed;
+
+  &:hover {
+    background-color: lighten($fab-button, 10);
+  }
+
+  > * {
+    display: block;
+    transform: rotate(0deg);
+    transition: transform $fab-transition-speed;
+  }
+}
+
+.fab-button--active {
+  > * {
+    transform: rotate(45deg);
+  }
+}

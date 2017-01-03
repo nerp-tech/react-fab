@@ -1,0 +1,16 @@
+.fab-actions {
+  bottom: 50px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 50px;
+
+  transition-duration: $fab-transition-speed;
+  transition-property: transform max-height opacity;
+}
+
+.fab-actions--active {
+  opacity: 1;
+  max-height: 1000px;
+}
