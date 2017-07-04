@@ -15,16 +15,16 @@
     "lint": "gulp lint"
   },
   "repository": {
-    "url": "git+https://github.com/MemosaApp/package-template.git",
+    "url": "git+https://github.com/MemosaApp/react-fab.git",
     "type": "git"
   },
   "keywords": [],
   "author": "Ivan Montiel <idmontie@gmail.com> (https://github.com/idmontie)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MemosaApp/package-template/issues"
+    "url": "https://github.com/MemosaApp/react-fab/issues"
   },
-  "homepage": "https://github.com/MemosaApp/package-template#readme",
+  "homepage": "https://github.com/MemosaApp/react-fab#readme",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
