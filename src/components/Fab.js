@@ -1,7 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { node } from 'prop-types';
 import FabButton from './FabButton';
-
-const { node } = PropTypes;
 
 export default class Fab extends Component {
   static propTypes = {

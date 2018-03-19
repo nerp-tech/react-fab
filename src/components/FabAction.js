@@ -1,7 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { bool, node, string } from 'prop-types';
 import classnames from 'classnames';
-
-const { bool, node, string } = PropTypes;
 
 export default class FabAction extends Component {
   static propTypes = {

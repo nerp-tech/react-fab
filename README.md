@@ -1,6 +1,6 @@
 # react-fab
 
-[![CircleCI](https://circleci.com/gh/MemosaApp/react-fab.svg?style=svg)](https://circleci.com/gh/MemosaApp/react-fab) [![npm version](https://badge.fury.io/js/react-fab.svg)](https://badge.fury.io/js/react-fab)
+[![CircleCI](https://circleci.com/gh/nerp-tech/react-fab.svg?style=svg)](https://circleci.com/gh/nerp-tech/react-fab) [![npm version](https://badge.fury.io/js/react-fab.svg)](https://badge.fury.io/js/react-fab)
 
 Floating Action Buttons for React
 
@@ -8,6 +8,9 @@ Floating Action Buttons for React
 
 ```
 yarn add react-fab
+
+# Dependencies:
+yarn add prop-types classnames react react-dom
 ```
 
 ## Usage
@@ -46,6 +49,8 @@ The following variables are overrideable:
 
 ```
 $fab-button: #FFDD6B !default;
+$fab-dark: #111 !default;
+$fab-light: #fff !default;
 $fab-text: #4a4943 !default;
 $fab-z-index: 998 !default;
 $fab-transition-speed: 0.2s !default;

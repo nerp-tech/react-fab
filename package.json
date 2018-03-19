@@ -1,8 +1,9 @@
 {
   "name": "react-fab",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Floating Action Buttons for React",
   "main": "dist/index.js",
+  "files": ["dist"],
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "npm run clean && npm run build:dist && npm run build:scss",
@@ -12,19 +13,20 @@
     "docs:watch": "nodemon --watch src --exec 'npm run docs'",
     "test": "gulp test",
     "test:watch": "nodemon --watch src --exec 'npm run test'",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "release": "yarn run clean; yarn run test; yarn run build; yarn run docs"
   },
   "repository": {
-    "url": "git+https://github.com/MemosaApp/react-fab.git",
+    "url": "git+https://github.com/nerp-tech/react-fab.git",
     "type": "git"
   },
   "keywords": [],
   "author": "Ivan Montiel <idmontie@gmail.com> (https://github.com/idmontie)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MemosaApp/react-fab/issues"
+    "url": "https://github.com/nerp-tech/react-fab/issues"
   },
-  "homepage": "https://github.com/MemosaApp/react-fab#readme",
+  "homepage": "https://github.com/nerp-tech/react-fab#readme",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
@@ -34,7 +36,6 @@
     "babel-preset-memosa": "^1.0.0",
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
-    "classnames": "^2.2.5",
     "enzyme": "^2.7.0",
     "eslint": "^3.12.2",
     "eslint-config-memosa": "^1.0.0",
@@ -56,12 +57,17 @@
     "jsdom": "^9.9.1",
     "nodemon": "^1.11.0",
     "react": "^15.4.1",
-    "react-addons-test-utils": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-addons-test-utils": "^15.4.1",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0"
   },
   "peerDependencies": {
-    "react": "^15.4.1"
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.1"
   }
 }

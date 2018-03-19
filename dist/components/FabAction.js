@@ -15,6 +15,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -29,9 +31,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var bool = _react.PropTypes.bool,
-    node = _react.PropTypes.node,
-    string = _react.PropTypes.string;
 var FabAction = (_temp = _class = function (_Component) {
   _inherits(FabAction, _Component);
 
@@ -95,10 +94,10 @@ var FabAction = (_temp = _class = function (_Component) {
 
   return FabAction;
 }(_react.Component), _class.propTypes = {
-  active: bool,
-  children: node,
-  className: string,
-  tooltip: string
+  active: _propTypes.bool,
+  children: _propTypes.node,
+  className: _propTypes.string,
+  tooltip: _propTypes.string
 }, _class.defaultProps = {
   className: ''
 }, _temp);
