@@ -1,6 +1,6 @@
 # react-fab
 
-[![CircleCI](https://circleci.com/gh/nerp-tech/react-fab.svg?style=svg)](https://circleci.com/gh/nerp-tech/react-fab) [![npm version](https://badge.fury.io/js/react-fab.svg)](https://badge.fury.io/js/react-fab)
+[![CircleCI](https://circleci.com/gh/nerp-tech/react-fab/tree/master.svg?style=svg)](https://circleci.com/gh/nerp-tech/react-fab/tree/master) [![npm version](https://badge.fury.io/js/react-fab.svg)](https://badge.fury.io/js/react-fab)
 
 Floating Action Buttons for React
 
