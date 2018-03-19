@@ -87,7 +87,7 @@ gulp.task('build:scss', (cb) => {
     fs.writeFileSync(out, '');
 
     files.sort((a, b) => {
-      return a < b ? -1 : 1;
+      return a < b ? 1 : -1;
     }).forEach((file) => {
       const content = fs.readFileSync(file, 'utf8');
 

@@ -4,6 +4,8 @@
 
 Floating Action Buttons for React
 
+- [Example usage repo](https://github.com/nerp-tech/react-fab-example)
+
 ## Installing
 
 ```
@@ -42,6 +44,12 @@ yarn add prop-types classnames react react-dom
 This package also come with a scss file that you can use:
 
 ```
+# JavaScript import:
+import 'react-fab/dist/main.scss';
+
+# - OR -
+
+# Scss import:
 import '{}/node_modules/react-fab/dist/main.scss';
 ```
 

@@ -1,5 +1,55 @@
-.fab-container {
+$fab-button: #FFDD6B !default;
+$fab-dark: #111 !default;
+$fab-light: #fff !default;
+$fab-text: #4a4943 !default;
+$fab-z-index: 998 !default;
+$fab-transition-speed: 0.2s !default;
+$fab-transition-speed-delayed: 0.3s !default;
+.fab-actions {
+  bottom: 50px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
   position: absolute;
+  width: 50px;
+
+  transition-duration: $fab-transition-speed;
+  transition-property: transform max-height opacity;
+}
+
+.fab-actions--active {
+  opacity: 1;
+  max-height: 1000px;
+}
+.fab-button {
+  background-color: $fab-button;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  color: $fab-text;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  z-index: $fab-z-index;
+  transition: background-color $fab-transition-speed;
+
+  &:hover {
+    background-color: lighten($fab-button, 10);
+  }
+
+  > * {
+    display: block;
+    transform: rotate(0deg);
+    transition: transform $fab-transition-speed;
+  }
+}
+
+.fab-button--active {
+  > * {
+    transform: rotate(45deg);
+  }
 }
 
 .fab-action {
@@ -51,56 +101,6 @@
   transform: scale(1) translateY(0);
   opacity: 1;
 }
-.fab-button {
-  background-color: $fab-button;
-  border: 0;
-  border-radius: 50%;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  color: $fab-text;
-  font-size: 20px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  width: 50px;
-  z-index: $fab-z-index;
-  transition: background-color $fab-transition-speed;
-
-  &:hover {
-    background-color: lighten($fab-button, 10);
-  }
-
-  > * {
-    display: block;
-    transform: rotate(0deg);
-    transition: transform $fab-transition-speed;
-  }
-}
-
-.fab-button--active {
-  > * {
-    transform: rotate(45deg);
-  }
-}
-.fab-actions {
-  bottom: 50px;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
+.fab-container {
   position: absolute;
-  width: 50px;
-
-  transition-duration: $fab-transition-speed;
-  transition-property: transform max-height opacity;
 }
-
-.fab-actions--active {
-  opacity: 1;
-  max-height: 1000px;
-}
-$fab-button: #FFDD6B !default;
-$fab-dark: #111 !default;
-$fab-light: #fff !default;
-$fab-text: #4a4943 !default;
-$fab-z-index: 998 !default;
-$fab-transition-speed: 0.2s !default;
-$fab-transition-speed-delayed: 0.3s !default;
