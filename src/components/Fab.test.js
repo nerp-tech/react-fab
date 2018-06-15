@@ -8,7 +8,6 @@ describe('<Fab />', () => {
   it('returns null when no children', () => {
     const wrapper = mount(<Fab />);
 
-
     expect(wrapper.html()).to.be.null;
   });
 

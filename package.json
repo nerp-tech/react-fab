@@ -16,8 +16,7 @@
     "test": "gulp test",
     "test:watch": "nodemon --watch src --exec 'npm run test'",
     "lint": "gulp lint",
-    "release": "yarn run clean; yarn run test; yarn run build; yarn run docs",
-    "prepublish": "yarn run release",
+    "prepublishOnly": "yarn run clean; yarn run test; yarn run build; yarn run docs",
     "storybook": "yarn run build:scss; start-storybook -p 6006",
     "build-storybook": "yarn run build:scss; build-storybook"
   },
@@ -78,8 +77,8 @@
     "style-loader": "^0.21.0"
   },
   "peerDependencies": {
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react": "^15.4.1 || ^16.0.0",
+    "react-dom": "^15.4.1 || ^16.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",

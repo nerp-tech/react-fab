@@ -35,6 +35,7 @@ export default class FabAction extends Component {
       active,
       children,
       className,
+      closeOnClick, // eslint-disable-line no-unused-vars
       onClick, // eslint-disable-line no-unused-vars
       tooltip,
       ...props
