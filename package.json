@@ -1,6 +1,6 @@
 {
   "name": "react-fab",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Floating Action Buttons for React",
   "main": "dist/index.js",
   "files": [
