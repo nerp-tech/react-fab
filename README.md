@@ -25,6 +25,7 @@ yarn add prop-types classnames react react-dom
   <FabActions>
     <FabAction
       className="button button-royal"
+      closeOnClick={false}
       onClick={this.handleCreateGroup}
       tooltip="Create Group"
     >
