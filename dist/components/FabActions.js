@@ -73,6 +73,6 @@ var FabActions = (_temp = _class = function (_Component) {
 }(_react.Component), _class.propTypes = {
   active: _propTypes.bool,
   children: _propTypes.node,
-  onClose: func
+  onClose: _propTypes.func
 }, _temp);
 exports.default = FabActions;

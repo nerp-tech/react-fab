@@ -3,7 +3,9 @@
   "version": "1.1.1",
   "description": "Floating Action Buttons for React",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "npm run clean && npm run build:dist && npm run build:scss",
@@ -15,7 +17,9 @@
     "test:watch": "nodemon --watch src --exec 'npm run test'",
     "lint": "gulp lint",
     "release": "yarn run clean; yarn run test; yarn run build; yarn run docs",
-    "prepublish": "yarn run release"
+    "prepublish": "yarn run release",
+    "storybook": "yarn run build:scss; start-storybook -p 6006",
+    "build-storybook": "yarn run build:scss; build-storybook"
   },
   "repository": {
     "url": "git+https://github.com/nerp-tech/react-fab.git",
@@ -29,14 +33,21 @@
   },
   "homepage": "https://github.com/nerp-tech/react-fab#readme",
   "devDependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.9",
+    "@storybook/addon-links": "^4.0.0-alpha.9",
+    "@storybook/addon-storysource": "^3.4.7",
+    "@storybook/addons": "^4.0.0-alpha.9",
+    "@storybook/react": "^4.0.0-alpha.9",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
     "babel-polyfill": "^6.20.0",
     "babel-preset-memosa": "^1.0.0",
+    "babel-runtime": "^7.0.0-beta.3",
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
+    "css-loader": "^0.28.11",
     "enzyme": "^2.7.0",
     "eslint": "^3.12.2",
     "eslint-config-memosa": "^1.0.0",
@@ -56,12 +67,15 @@
     "jsdoc-memosa": "^1.1.0",
     "jsdoc-to-markdown": "^2.0.1",
     "jsdom": "^9.9.1",
+    "node-sass": "^4.9.0",
     "nodemon": "^1.11.0",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1",
     "react-addons-test-utils": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "sass-loader": "^7.0.3",
     "sinon": "^1.17.6",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "style-loader": "^0.21.0"
   },
   "peerDependencies": {
     "react": "^15.4.1",

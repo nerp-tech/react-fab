@@ -47,11 +47,12 @@ var FabAction = (_temp2 = _class = function (_Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = FabAction.__proto__ || Object.getPrototypeOf(FabAction)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (e) {
       var _this$props = _this.props,
+          closeOnClick = _this$props.closeOnClick,
           onClick = _this$props.onClick,
           onClose = _this$props.onClose;
 
 
-      if (onClose) {
+      if (closeOnClick && onClose) {
         onClose();
       }
 
@@ -119,10 +120,12 @@ var FabAction = (_temp2 = _class = function (_Component) {
   active: _propTypes.bool,
   children: _propTypes.node,
   className: _propTypes.string,
-  onClick: func,
-  onClose: func,
+  closeOnClick: _propTypes.bool,
+  onClick: _propTypes.func,
+  onClose: _propTypes.func,
   tooltip: _propTypes.string
 }, _class.defaultProps = {
-  className: ''
+  className: '',
+  closeOnClick: true
 }, _temp2);
 exports.default = FabAction;
