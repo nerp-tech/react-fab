@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import { bool, node } from 'prop-types';
+import { bool, func, node } from 'prop-types';
 import classnames from 'classnames';
 
 export default class FabActions extends Component {
   static propTypes = {
     active: bool,
     children: node,
+    onClose: func,
   }
 
   render() {
-    const { active, children } = this.props;
+    const { active, children, onClose } = this.props;
 
     const className = classnames(
       'fab-actions',
@@ -25,6 +26,7 @@ export default class FabActions extends Component {
             const options = {
               active,
               key: index,
+              onClose,
             };
 
             if (React.isValidElement(element)) {

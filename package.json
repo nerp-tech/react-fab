@@ -14,7 +14,8 @@
     "test": "gulp test",
     "test:watch": "nodemon --watch src --exec 'npm run test'",
     "lint": "gulp lint",
-    "release": "yarn run clean; yarn run test; yarn run build; yarn run docs"
+    "release": "yarn run clean; yarn run test; yarn run build; yarn run docs",
+    "prepublish": "yarn run release"
   },
   "repository": {
     "url": "git+https://github.com/nerp-tech/react-fab.git",

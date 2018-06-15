@@ -17,6 +17,12 @@ export default class Fab extends Component {
     });
   }
 
+  handleClose = () => {
+    this.setState({
+      active: false,
+    });
+  }
+
   render() {
     const { children, ...props } = this.props;
     const { active } = this.state;
@@ -32,6 +38,7 @@ export default class Fab extends Component {
             const options = {
               active,
               key: index,
+              onClose: this.handleClose,
             };
 
             if (element && element.type === FabButton) {

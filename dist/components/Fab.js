@@ -51,6 +51,10 @@ var Fab = (_temp2 = _class = function (_Component) {
       _this.setState({
         active: !_this.state.active
       });
+    }, _this.handleClose = function () {
+      _this.setState({
+        active: false
+      });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -76,7 +80,8 @@ var Fab = (_temp2 = _class = function (_Component) {
         _react2.default.Children.map(children, function (element, index) {
           var options = {
             active: active,
-            key: index
+            key: index,
+            onClose: _this2.handleClose
           };
 
           if (element && element.type === _FabButton2.default) {

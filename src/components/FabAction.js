@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bool, node, string } from 'prop-types';
+import { bool, func, node, string } from 'prop-types';
 import classnames from 'classnames';
 
 export default class FabAction extends Component {
@@ -7,11 +7,27 @@ export default class FabAction extends Component {
     active: bool,
     children: node,
     className: string,
+    closeOnClick: bool,
+    onClick: func,
+    onClose: func,
     tooltip: string,
   }
 
   static defaultProps = {
     className: '',
+    closeOnClick: true,
+  }
+
+  handleClick = (e) => {
+    const { closeOnClick, onClick, onClose } = this.props;
+
+    if (closeOnClick && onClose) {
+      onClose();
+    }
+
+    if (onClick) {
+      onClick(e);
+    }
   }
 
   render() {
@@ -19,6 +35,7 @@ export default class FabAction extends Component {
       active,
       children,
       className,
+      onClick: _,
       tooltip,
       ...props
     } = this.props;
@@ -39,7 +56,7 @@ export default class FabAction extends Component {
     );
 
     const button = (
-      <button className={buttonClassName} {...props}>
+      <button className={buttonClassName} onClick={this.handleClick} {...props}>
         {
           React.Children.map(children, (element, index) => {
             const options = {

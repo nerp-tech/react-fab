@@ -41,7 +41,8 @@ var FabActions = (_temp = _class = function (_Component) {
     value: function render() {
       var _props = this.props,
           active = _props.active,
-          children = _props.children;
+          children = _props.children,
+          onClose = _props.onClose;
 
 
       var className = (0, _classnames2.default)('fab-actions', {
@@ -54,7 +55,8 @@ var FabActions = (_temp = _class = function (_Component) {
         _react2.default.Children.map(children, function (element, index) {
           var options = {
             active: active,
-            key: index
+            key: index,
+            onClose: onClose
           };
 
           if (_react2.default.isValidElement(element)) {
@@ -70,6 +72,7 @@ var FabActions = (_temp = _class = function (_Component) {
   return FabActions;
 }(_react.Component), _class.propTypes = {
   active: _propTypes.bool,
-  children: _propTypes.node
+  children: _propTypes.node,
+  onClose: func
 }, _temp);
 exports.default = FabActions;
